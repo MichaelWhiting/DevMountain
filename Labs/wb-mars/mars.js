@@ -118,9 +118,11 @@ alert(`${username}, ${companionName}, and ${companionName2}, surfing the celesti
 
 
 // Alerts for the countdown and temperature.
+
 let temp = 0;
 while (temp < 1200) {
-    alert(`Temp is: ${temp} degrees`);
+    let alerts = alert(`Temp is: ${temp} degrees`);
+    // setTimeout(doesNothing, 2000);
     temp += 100;
 }
 
