@@ -9,10 +9,10 @@ const numb2 = 200;
 
 function evaluateNums(num1, num2) {
     if (isNaN(num1) || isNaN(num2)) {
-        return "Whoa, those aren't numbers!"
+        return "Whoa, those aren't numbers!";
     }
     if (num1 === num2) {
-        return "These numbers are equal";
+        return "These numbers are equal"; 
     }
     return num1 < num2 ? `${num1} is less than ${num2}.` : `${num1} is greater than ${num2}`;
 }
