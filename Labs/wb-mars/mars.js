@@ -1,3 +1,10 @@
+// Sleep function stuff
+// const sleep = (ms = 0) => new Promise(resolve => setTimeout(resolve, ms));
+
+// async function delay(time) {
+//    await sleep(time);
+// }
+
 alert("Hello!");
 alert("Starting your Mars Adventure");
 alert("Booting up...");
@@ -116,13 +123,11 @@ if (decorChoice === "A") {
 // Shows the final message before liftoff
 alert(`${username}, ${companionName}, and ${companionName2}, surfing the celestial abyss, in a ${decor} themed spaceship.`);
 
-
 // Alerts for the countdown and temperature.
 
 let temp = 0;
 while (temp < 1200) {
-    let alerts = alert(`Temp is: ${temp} degrees`);
-    // setTimeout(doesNothing, 2000);
+    alert(`Temp is: ${temp} degrees`);
     temp += 100;
 }
 
