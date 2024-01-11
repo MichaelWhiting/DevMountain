@@ -94,7 +94,7 @@ function addTen(inputArray) {
 function count31() {
   let numbers = [];
   // Code here
-  for (let i = 0; i < 32; i++) {
+  for (let i = 0; i < 32; i += 1) {
     numbers.push(i);
   }
   return numbers;
@@ -155,9 +155,10 @@ function findInArray(inputArray, value) {
   // Code here
   let valueFound;
 
-  for (let i = 0; i < inputArray.length; i += 1) {
-    valueFound = inputArray[i] === value
-  }
+  valueFound = inputArray.includes(value)
+  // for (let i = 0; i < inputArray.length; i += 1) {
+  //   valueFound = inputArray[i] === value
+  // }
 
   return valueFound;
 }
