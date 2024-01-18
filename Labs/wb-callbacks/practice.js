@@ -291,16 +291,12 @@ const orders = [
 let orderTotals = [];
 
 function calculateOrders(orders, cb) {
-  orders.forEach((order, i) => {
+  orders.forEach((order) => {
     cb(order);
   })
 };
 
-calculateOrders(orders, (order, i) => {
-  orderTotals.push(order.price + order.price * order.tax);
-})
-
-console.log(orderTotals)
+calculateOrders(orders, (order) => orderTotals.push(order.price + order.price * order.tax));
 
 
 /// /////// PROBLEM 13 //////////

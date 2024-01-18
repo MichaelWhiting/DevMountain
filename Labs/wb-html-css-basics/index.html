@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <div id="container">
+    <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link href = "styles.css" rel="stylesheet"\>
+      <title>Order a Smoothiegram!</title>
+    </head>
+  
+    <body>
+      <header>
+        <h1>Order a Smoothiegram</h1>
+        <p class="lead">
+          There's no better way to show a loved one you care than with a Smoothiegram!
+        </p>
+        <p>There's no better way to show a loved one you care than with a Smoothiegram!</p>
+        <p>Each Smoothiegram comes with a custom message printed on high-quality cardstock
+        and your choice of a premium, hand-crafted smoothie.</p>
+      </header>
+  
+      <main>
+        <section>
+          <h2>Smoothie Options</h2>
+          <p>Choose from one of these smoothies.</p>
+          <table>
+            <thead>
+              <tr>
+                <th>Flavor</th>
+                <th>Price</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Super Strawberries Delicious</td>
+                <td class="price"">$1,200.00</td>
+              </tr>
+              <tr>
+                <td>White Grape Ranger</td>
+                <td class="price">$400.00</td>
+              </tr>
+              <tr>
+                <td>Blueberry Blast</td>
+                <td class="price">$1,750.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+  
+        <section>
+          <h2>Order Form</h2>
+          <form>
+            <div class="form-group">       
+              <label>Your name:</label>
+              <input type="text" name="sender"/>
+            </div>
+  
+            <div class="form-group">
+              <label>Who are we sending this to?</label>
+              <input type="text" name="recipient"/>
+            </div>
+  
+            <div class="form-group">
+              <label> Choose a smoothie: </label>
+              <select name="smoothie"/>
+                <option value="">Please choose an option</option>
+                <option value="super strawbrerries delicous">Super Strawberries Delicious</option>
+                <option value="white grape ranger">White Grape Ranger</option>
+                <option value="blueberry blast">Blueberry Blasts</option>
+              </select>
+            </div>
+  
+            <div class="form-group">
+              <span>When should we deliver?</span>
+              <input type="radio" name="delivery-time" value="asap"/>
+              <label class="inline-label">As soon as possible</label>
+              <input type="radio" name="delivery-time" value="am"/>
+              <label class="inline-label">Morning</label>
+              <input type="radio" name="delivery-time" value="pm"/>
+              <label class="inline-label">Afternoon</label>
+            </div>
+  
+            <div class="form-group">
+              <label>Enter your message:</label>
+              <textarea id="enter-message" name="message"></textarea>
+            </div>
+  
+            <div class="form-group">
+              <label class="inline-label">Subscribe to our newsletter?</label>
+              <input type="checkbox" name="subscribe" value="yes" checked/>
+            </div>
+            <div class="form-group">
+              <button type="submit">Submit</button>
+            </div>
+          </form>
+        </section>
+      </main>
+    </body>
+  </div>
+</html>
