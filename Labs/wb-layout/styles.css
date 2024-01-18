@@ -1,0 +1,69 @@
+body {
+    background: black;
+    background-image: url('https://images.alphacoders.com/935/935315.png');
+    background-size: cover;
+}
+
+.navigation {
+    display: inline-block;
+    left: 540px;
+    position: absolute;
+    top: 42px;
+    height: 30px;
+    margin: auto;
+}
+
+.link {
+    width: fit-content;
+    background: transparent;
+    color: white;
+    font-family: D-DIN-Bold, Arial, Verdana, sans-serif;
+    font-size: 12px;
+    font-weight: bolder;
+    margin-left: 12px;
+    margin-right: 12px;
+    text-align: left;
+}
+
+#logo {
+    position:absolute;
+    top: -4px;
+    left: 300px;
+    width: 210px;
+    height: auto;
+}
+
+#navigationRight {
+    display: inline-block;
+    right: 85px;
+    position: absolute;
+    top: 42px;
+    height: 30px;
+}
+
+
+h1, h3, button {
+    color: white;
+    font-family: D-DIN-Bold, Arial, Verdana, sans-serif;
+    text-align: left;
+}
+
+h3 {
+    font-weight: 20;
+}
+
+#launch {
+    position:absolute;
+    left: 300px;
+    bottom: 200px;
+}
+
+#watchButton {
+    font-weight: bold;
+    text-align: center;
+    height: 50px;
+    width: 200px;
+    color: white;
+    outline-color: white;
+    background: transparent;
+}
