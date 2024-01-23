@@ -1,0 +1,26 @@
+{% extends 'index.html' %}
+
+{% block title %}
+    <title>Game | Madlibs!</title>
+{% endblock %}
+
+{% block content %}
+<form action="madlib">
+    <p>Enter a name:</p>
+    <input type="text" name="name">
+
+    <p>Enter a color:</p>
+    <input type="text" name="color">
+
+    <p>Enter a noun:</p>
+    <input type="text" name="noun">
+
+    <p>Enter an adjective:</p>
+    <input type="text" name="adjective">
+
+    <p>Enter a place:</p>
+    <input type="text" name="place">
+
+    <button type="submit" style="display: block; margin: 50px 0px;">Generate MadLib</button>
+</form>
+{% endblock %}
