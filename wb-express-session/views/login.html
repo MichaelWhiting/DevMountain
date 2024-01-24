@@ -1,0 +1,12 @@
+{% extends 'index.html' %}
+
+{% block body %}
+
+    <h3>Log In</h3>
+    <form action="/login" method="POST">
+        Email: <input name="email" type="email"/>
+        <br/>
+        <input type="submit" />
+    </form>
+
+{% endblock %}
