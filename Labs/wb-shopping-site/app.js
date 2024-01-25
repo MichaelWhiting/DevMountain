@@ -74,6 +74,13 @@ app.get('/cart', (req, res) => {
   res.render('cart.html', {animals: animals, orderTotal: orderTotal});
 });
 
+app.get('/data', (req, res) => {
+  res.send({
+    message: "Hi, nice to see you!",
+    results: [1,2,3,4,5]
+  })
+});
+
 app.get('/checkout', (req, res) => {
   // Empty the cart.
   req.session.cart = {};
