@@ -3,8 +3,6 @@
 //     document.querySelector("#drinkDisplay").innerHTML = res.data.message;
 // });
 
-// import axios from "axios";
-
 const drinkDisplay = document.querySelector("#drinkDisplay");
 const drinkForm = document.querySelector("form");
 
@@ -24,11 +22,14 @@ const createDrinkCard = (drinkObj) => {
 
         <br/>
 
-        <button>Delete Me</button>
+        <button onclick="deleteDrink(${drinkObj.id})">Delete Me</button>
     `;
+
 
     drinkDisplay.appendChild(newDrinkCard);
 };
+
+
 
 const displayAllDrinks = (drinkArr) => {
     drinkArr.forEach((drink) => {
@@ -54,9 +55,18 @@ const handleSubmit = (evt) =>  {
     };
 
     drinkDisplay.innerHTML = "";
+    name.value = "";
+    drinkImg.value = "";
 
     axios.post('/addDrink', bodyObj).then((res) => {
         // After the server adds the drink to the JSON file, this runs to reload the page and show the new JSON page
+        displayAllDrinks(res.data.allDrinks);
+    });
+}
+
+const deleteDrink = (id) => {
+    axios.delete(`/deleteDrink/${id}`).then((res) => {
+        drinkDisplay.innerHTML = "";
         displayAllDrinks(res.data.allDrinks);
     });
 }

@@ -20,20 +20,35 @@ const handlerFunctions = {
         const drinkPic = req.body.drinkPic;
         // create a new drink object, passing in the values form the request object, save to DB
         const newDrink = {
-            "id": drinks.length, // globalId
+            "id": globalId, // globalId
             "name": drinkName,
             "picture": drinkPic,
             "votes": 0
         };
 
-        // globalId++;
+        globalId++;
         drinks.push(newDrink);
-        console.log(newDrink.id + 1);
 
         res.send({
             message: "Drink added sucessfully",
             allDrinks: drinks
         })
+    },
+
+    deleteDrink: (req, res) => {
+        const drinkId = req.params.id;
+
+        for (let i = 0; i < drinks.length; i++) {
+            if (drinks[i].id === +drinkId) {
+                drinks.splice(i, 1);
+                break;
+            }
+        }
+
+        res.send({
+            message: "Deleted drink",
+            allDrinks: drinks
+        });
     }
 };
 
