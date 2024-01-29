@@ -49,6 +49,26 @@ const handlerFunctions = {
             message: "Deleted drink",
             allDrinks: drinks
         });
+    },
+
+    updateDrink: (req, res) => {
+        const drinkId = req.params.id;
+        const voteType = req.body.voteType;
+
+        const drinkIdx = drinks.findIndex((drink) => {
+            return drink.id === +drinkId;
+        })
+
+        if (voteType === "upvote") {
+            drinks[drinkIdx].votes += 1
+        } else if (voteType === "downvote") {
+            drinks[drinkIdx].votes -= 1
+        }
+
+        res.send({ 
+            message: "Updated drink votes",
+            allDrinks: drinks
+        })
     }
 };
 

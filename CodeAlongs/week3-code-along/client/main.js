@@ -14,17 +14,17 @@ const createDrinkCard = (drinkObj) => {
     newDrinkCard.innerHTML = `
         <img src="${drinkObj.picture}"/>
         <p>${drinkObj.name}</p>
+        
         <section>
-            <button>-</button>
+            <button onclick="updateDrink(${drinkObj.id}, 'downvote')">-</button>
             Popularity: ${drinkObj.votes}
-            <button>+</button>
+            <button onclick="updateDrink(${drinkObj.id}, 'upvote')">+</button>
         </section>
 
         <br/>
 
         <button onclick="deleteDrink(${drinkObj.id})">Delete Me</button>
     `;
-
 
     drinkDisplay.appendChild(newDrinkCard);
 };
@@ -69,6 +69,19 @@ const deleteDrink = (id) => {
         drinkDisplay.innerHTML = "";
         displayAllDrinks(res.data.allDrinks);
     });
+}
+
+// function to update the popularity votes of a drink, this function should accept both the drinks ID and whether we are 
+// upvoting or downvoting
+
+const updateDrink = (id, type) => {
+    let bodyObj = {
+        voteType: type
+    }
+    axios.put(`/updateDrink/${id}`, bodyObj).then((res) => {
+        drinkDisplay.innerHTML = "";
+        displayAllDrinks(res.data.allDrinks);
+    })
 }
 
 drinkForm.addEventListener('submit', handleSubmit);
