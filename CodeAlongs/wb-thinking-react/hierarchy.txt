@@ -1,0 +1,15 @@
+- InvoiceTable
+    - InvoiceTableHeader
+    - InvoiceTableAddButton
+    - InvoiceTableRow
+        - Buttons
+        - Description
+        - Rate
+        - Hours
+
+What pieces of data should be "state"?
+- Add row?
+    - Description
+    - Rate
+    - Hours
+    - isEditing
