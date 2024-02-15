@@ -11,20 +11,19 @@ const createDrinkCard = (drinkObj) => {
     // Create a new section element
     const newDrinkCard = document.createElement("section");
     newDrinkCard.className = "drinkCard";
-    newDrinkCard.innerHTML = `
-        <img src="${drinkObj.picture}"/>
-        <p>${drinkObj.name}</p>
-        
-        <section>
-            <button onclick="updateDrink(${drinkObj.id}, 'downvote')">-</button>
-            Popularity: ${drinkObj.votes}
-            <button onclick="updateDrink(${drinkObj.id}, 'upvote')">+</button>
-        </section>
+    newDrinkCard.innerHTML = `    
+    <img src=${drinkObj.picture} />
+    <p>${drinkObj.name}</p>
 
-        <br/>
+    <section>
+    <button onclick="updateDrink(${drinkObj.id}, 'downvote')" >-</button>
+    Popularity: ${drinkObj.votes}
+    <button onclick="updateDrink(${drinkObj.id}, 'upvote')">+</button>
+    </section>
 
-        <button onclick="deleteDrink(${drinkObj.id})">Delete Me</button>
-    `;
+    <br/>
+
+    <button onclick="deleteCar(${drinkObj.id})">Delete Me</button>`;
 
     drinkDisplay.appendChild(newDrinkCard);
 };

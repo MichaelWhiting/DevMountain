@@ -23,12 +23,13 @@ app.use(
     
 // Import handlers
 import handlerFunctions from './controller.js'
+
 // Routes
-app.get('/hello', handlerFunctions.sayHello);
+// app.get('/hello', handlerFunctions.sayHello);
 app.get('/drinks', handlerFunctions.getAllDrinks);
 app.post('/addDrink', handlerFunctions.addDrink);
 app.delete('/deleteDrink/:id', handlerFunctions.deleteDrink);
-app.put('/updateDrink/:id', handlerFunctions.updateDrink)
+app.put('/updateDrink/:id', handlerFunctions.updateDrink);
 
 // Start up the server
 app.listen("9009", () => {
